@@ -1,24 +1,13 @@
-import logo from './logo.svg';
+import AllRoutes from './AllRoutes';
+import { BrowserRouter} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* This is where everything comes together. It uses the all routes component to know where all of the webpages are and it starts at the index page which is home.js */}
+      <AllRoutes />
+    </BrowserRouter>
   );
 }
 
