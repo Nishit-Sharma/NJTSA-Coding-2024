@@ -1,9 +1,15 @@
 import React from 'react';
 import Layout from '../../Layout.js';
+import { useSpring, animated } from 'react-spring';
 import '../../Global.css';
-import { Link } from 'react-router-dom';
 
 function Place1() {
+    const props = useSpring({
+        to: { opacity: 1 },
+        from: { opacity: 0 },
+        delay: 300,
+      });
+
     const placeDetails = {
         name: "Example Place",
         description: "A beautiful destination in New Jersey with stunning views and rich history.",
@@ -30,22 +36,24 @@ function Place1() {
     ];
 
     return (
-        <Layout>
-            <div className="place-container">
-                <h1>{placeDetails.name}</h1>
-                <p>{placeDetails.description}</p>
-                <p>Address: {placeDetails.address}</p>
-                <p>Phone: {placeDetails.phone}</p>
-                <h2>Activities in New Jersey</h2>
-                {activities.map((activity, index) => (
-                    <div key={index} className="activity">
-                        <h3>{activity.name}</h3>
-                        <p>{activity.description}</p>
-                        <a href={activity.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
-                    </div>
-                ))}
-            </div>
-        </Layout>
+        <animated.div style={props}>
+            <Layout>
+                <div className="place-container">
+                    <h1>{placeDetails.name}</h1>
+                    <p>{placeDetails.description}</p>
+                    <p>Address: {placeDetails.address}</p>
+                    <p>Phone: {placeDetails.phone}</p>
+                    <h2>Activities in New Jersey</h2>
+                    {activities.map((activity, index) => (
+                        <div key={index} className="activity">
+                            <h3>{activity.name}</h3>
+                            <p>{activity.description}</p>
+                            <a href={activity.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                        </div>
+                    ))}
+                </div>
+            </Layout>
+        </animated.div>
     );
 }
 
