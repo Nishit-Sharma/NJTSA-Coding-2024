@@ -19,6 +19,9 @@ function Home() {
         >
           Learn React
         </a>
+        <Link to="/place1">
+            <button>button</button>
+        </Link>
       </header>
     </div>
   );

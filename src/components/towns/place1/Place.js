@@ -1,9 +1,9 @@
-import Layout from '../Layout.js';
-import '../Global.css';
+import Layout from '../../Layout.js';
+import '../../Global.css';
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
+import logo from '../../../logo.svg';
 
-function Place() {
+function Place1() {
 
 
     return (
@@ -26,4 +26,4 @@ function Place() {
       );
 }
 
-export default Place;
+export default Place1;
