@@ -7,7 +7,7 @@ function Place9() {
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
-    delay: 300,
+    delay: 100,
   });
 
 const placeDetails = {
