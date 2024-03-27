@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import '../../Global.css';
-import Image1 from '../../static/p1image1.jpg'; // Import the image for the header
+import Image1 from '../../static/p1image1.jpg';
+import Image2 from '../../static/p1image1.jpg';
 
 function Place1() {
     const props = useSpring({
@@ -58,7 +59,7 @@ function Place1() {
                         <div className="sidebar">
                             <div className="sidebar-content">
                                 <div className="park-map">
-                                    <img src={parkMapUrl} alt="Park Map" />
+                                    <img src={Image2} alt="Park Map" />
                                 </div>
                                 <div className="general-info">
                                     <h2>General Information</h2>
