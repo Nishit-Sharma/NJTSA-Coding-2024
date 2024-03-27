@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import Layout from './Layout.js';
-import { Box, Center, Image, Flex, Badge, Text } from "@chakra-ui/react";
+// import { Box, Center, Image, Flex, Badge, Text } from "@chakra-ui/react";
 
 import './Global.css';
 import Image1 from './static/image1.jpg';
