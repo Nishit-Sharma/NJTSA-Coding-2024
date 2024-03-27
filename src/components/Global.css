@@ -131,13 +131,13 @@ p {
 }
 
 .overview-section h2 {
-    font-size: 2.5vw;            /* vw */
+    font-size: 2.0vw;            /* vw */
     color: #333;
     margin-bottom: 10px;
 }
 
 .overview-section p {
-    font-size: 1.6vw;           /* vw */
+    font-size: 1.2vw;           /* vw */
     color: #666;
     line-height: 1.5;
 }
@@ -145,6 +145,7 @@ p {
 .overview-section ul {
     list-style-type: disc;
     padding-left: 20px;
+    font-size: 1.2vw;           /* vw */
 }
 
 .overview-section ul li {
@@ -210,12 +211,13 @@ nav ul li a:hover {
 }
 
 .general-info h2 {
-    font-size: 2vw;         /* vw */
+    font-size: 1.6vw;         /* vw */
     margin-top: 20px;
 }
 
 .general-info p {
-    margin: 1vw 0;          /* vw */
+    margin: 1vw 0;   
+    font-size: 1.2vw;       /* vw */
 }
 
 /* CSS for placeDetails */
@@ -237,15 +239,6 @@ nav ul li a:hover {
     font-size: 1.6vw;           /* vw */
     color: #666;
     line-height: 1.5;
-}
-
-.place-details ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.place-details ul li {
-    margin-bottom: 10px;
 }
 
 /* CSS for Header component */
