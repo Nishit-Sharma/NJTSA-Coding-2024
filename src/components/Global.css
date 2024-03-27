@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    font-size: 1vw;                 /* vw */
 }
 
 a {
@@ -29,12 +30,12 @@ a {
 }
 
 .place-container h1 {
-    font-size: 24px;
+    font-size: 2.5vw;           /* vw */
     color: #333;
 }
 
 .place-container p {
-    font-size: 16px;
+    font-size: 1.5vw;           /* vw */
     color: #666;
 }
 
@@ -44,12 +45,12 @@ a {
 }
 
 .activity h3 {
-    font-size: 20px;
+    font-size: 2vw;            /* vw */
     color: #333;
 }
 
 .activity p {
-    font-size: 14px;
+    font-size: 1.4vw;           /* vw */
     color: #777;
 }
 
@@ -87,6 +88,7 @@ p {
     text-decoration: none;
     color: #333;
     transition: transform 0.3s ease; /* Added transition for hover effect */
+    margin-top: 1vw;            /* vw */
 }
 
 .place-link:hover {
@@ -117,7 +119,7 @@ p {
 }
 
 .header h1 {
-    font-size: 32px;
+    font-size: 3vw;         /* vw */
 }
 
 .overview-section {
@@ -129,13 +131,13 @@ p {
 }
 
 .overview-section h2 {
-    font-size: 24px;
+    font-size: 2.5vw;            /* vw */
     color: #333;
     margin-bottom: 10px;
 }
 
 .overview-section p {
-    font-size: 16px;
+    font-size: 1.6vw;           /* vw */
     color: #666;
     line-height: 1.5;
 }
@@ -208,12 +210,12 @@ nav ul li a:hover {
 }
 
 .general-info h2 {
-    font-size: 20px;
+    font-size: 2vw;         /* vw */
     margin-top: 20px;
 }
 
 .general-info p {
-    margin: 10px 0;
+    margin: 1vw 0;          /* vw */
 }
 
 /* CSS for placeDetails */
@@ -226,13 +228,13 @@ nav ul li a:hover {
 }
 
 .place-details h2 {
-    font-size: 24px;
+    font-size: 1.6vw;       /* vw */
     color: #333;
     margin-bottom: 10px;
 }
 
 .place-details p {
-    font-size: 16px;
+    font-size: 1.6vw;           /* vw */
     color: #666;
     line-height: 1.5;
 }
@@ -248,6 +250,7 @@ nav ul li a:hover {
 
 /* CSS for Header component */
 .home-link {
+    font-size: 1.8vw;           /* vw */
     text-decoration: none;
     color: lightblue; /* Blue color for unvisited links */
 }
