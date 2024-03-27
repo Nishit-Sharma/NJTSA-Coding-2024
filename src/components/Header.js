@@ -5,7 +5,6 @@ import './Global.css';
 
 function Header() {
   return (
-    <Box className="header" borderBottomRadius="10px">
     <header>
       <div className="logo header-logo header-logo-size">
         {/* Making the image link to something */}
@@ -22,7 +21,6 @@ function Header() {
           </ul>
       </nav>
     </header>
-    </Box>
   );
 }
 
