@@ -45,7 +45,7 @@ function Home() {
             </Link>
             <Link key={4} to={`/place${4}`} className="place-link">
               <img src={Image4} alt={`Six Flags Great Adventure`} className="place-image" />
-              <p>Six Flag Great Adventure</p>
+              <p>Six Flag Great Adventures</p>
             </Link>
             <Link key={5} to={`/place${5}`} className="place-link">
               <img src={Image5} alt={`Adventure Aquarium`} className="place-image" />
