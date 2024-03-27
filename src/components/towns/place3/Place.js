@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import Image3 from '../../static/image3.jpg'; // Assuming this is the image for the Statue of Liberty
+import Image1 from '../../static/p3image1.webp'; // Assuming this is the image for the Statue of Liberty
 
 function Place3() {
     const props = useSpring({
@@ -17,7 +17,7 @@ function Place3() {
         description: "Experience the iconic symbol of freedom and democracy at the Statue of Liberty, a timeless monument standing proudly in New York Harbor.",
         address: "Liberty Island, New York, NY 10004",
         phone: "1-212-363-3200",
-        hours: "9:00 AM - 5:00 PM (Park Hours)",
+        hours: "9:00 AM - 5:00 PM",
         website: "https://www.nps.gov/stli/index.htm",
         about: `
             The Statue of Liberty, a gift from France to the United States, is an enduring symbol of liberty 
@@ -45,7 +45,7 @@ function Place3() {
     return (
         <animated.div style={props}>
             <Layout>
-                <div className="header" style={{ backgroundImage: `url(${Image3})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                <div className="header" style={{ backgroundImage: `url(${Image1})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
                     {/* You can add any overlay content here if needed */}
                 </div>
 

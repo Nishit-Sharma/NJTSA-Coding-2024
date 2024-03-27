@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import Image7 from '../../static/image7.jpg'; // Assuming this is the image for Cape May County Park & Zoo
+import Image1 from '../../static/p7image1.avif'; // Assuming this is the image for Cape May County Park & Zoo
 
 function Place7() {
     const props = useSpring({
@@ -47,7 +47,7 @@ function Place7() {
     return (
         <animated.div style={props}>
             <Layout>
-                <div className="header" style={{ backgroundImage: `url(${Image7})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                <div className="header" style={{ backgroundImage: `url(${Image1})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
                     {/* You can add any overlay content here if needed */}
                 </div>
 

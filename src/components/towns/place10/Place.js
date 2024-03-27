@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import Image10 from '../../static/image10.jpg'; // Assuming this is the image for Atlantic City Boardwalk
+import Image1 from '../../static/p10image1.jpg'; // Assuming this is the image for Atlantic City Boardwalk
 function Place10() {
     const props = useSpring({
         to: { opacity: 1 },
@@ -43,7 +43,7 @@ function Place10() {
     return (
         <animated.div style={props}>
             <Layout>
-                <div className="header" style={{ backgroundImage: `url(${Image10})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                <div className="header" style={{ backgroundImage: `url(${Image1})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
                     {/* You can add any overlay content here if needed */}
                 </div>
                 <div className="container">

@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import Image8 from '../../static/image8.jpg'; // Assuming this is the image for Morey's Piers & Beachfront
+import Image1 from '../../static/p8image1.webp'; // Assuming this is the image for Morey's Piers & Beachfront
 
 function Place8() {
     const props = useSpring({
@@ -44,7 +44,7 @@ function Place8() {
     return (
         <animated.div style={props}>
             <Layout>
-                <div className="header" style={{ backgroundImage: `url(${Image8})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                <div className="header" style={{ backgroundImage: `url(${Image1})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
                     {/* You can add any overlay content here if needed */}
                 </div>
 
