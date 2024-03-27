@@ -5,7 +5,7 @@ import './Global.css';
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="logo header-logo header-logo-size">
         {/* Making the image link to something */}
         {/* <Link to="/">
