@@ -3,7 +3,7 @@ import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import '../../Global.css';
 import Image1 from '../../static/p1image1.jpg';
-import Image2 from '../../static/p1image1.jpg';
+import Image2 from '../../static/p1image2.png';
 
 function Place1() {
     const props = useSpring({
@@ -14,21 +14,33 @@ function Place1() {
 
     const placeDetails = {
         name: "Liberty State Park",
-        description: "A beautiful destination in New Jersey with stunning views and rich history.",
-        address: "200 Morris Pesin Dr, Jersey City, NJ 07305",
-        phone: "(201) 915-3402",
-        hours: "Park is open daily from 6:00 AM to 10:00 PM",
-        website: "https://www.state.nj.us/dep/parksandforests/parks/liberty_state_park/liberty_state_park_home.htm",
-        about: "Liberty State Park is a green oasis in the middle of Metropolitan northern New Jersey. With the Manhattan skyline, the Statue of Liberty, and Ellis Island as a spectacular backdrop, Liberty State Park is one of the state's most dramatic parks.",
+        description: "Experience the harmony of nature and urban splendor at Liberty State Park, a sprawling oasis nestled along the picturesque Hudson River waterfront.",
+        address: "1 Audrey Zapp Dr, Jersey City, NJ 07305",
+        phone: "(201) 915-3402 ext. 101",
+        hours: "6:00 AM - 10:00 PM",
+        website: "https://www.nj.gov/dep/parksandforests/parks/libertystatepark.html",
+        about: `
+            Liberty State Park is a stunning fusion of natural beauty and historical significance, 
+            offering visitors a multifaceted experience that celebrates the spirit of freedom and exploration. 
+            Spanning over 1,200 acres, this iconic park boasts panoramic views of the Manhattan skyline, 
+            the majestic Statue of Liberty, and the historic Ellis Island. Immerse yourself in the tranquility 
+            of its lush landscapes, embark on scenic waterfront walks, or enjoy recreational activities such as 
+            biking, fishing, and picnicking. Delve into the park's rich history with visits to the Central Railroad 
+            of New Jersey Terminal and the Liberty Science Center. With its diverse array of attractions and scenic 
+            vistas, Liberty State Park invites you to embark on an unforgettable journey of discovery and relaxation.
+        `,
         features: [
-            "Walking and biking paths",
-            "Picnic areas",
-            "Fishing and crabbing",
-            "Playgrounds",
-            "Interpretive center",
-            "Ferry service to Statue of Liberty and Ellis Island"
+            "Scenic waterfront promenades with stunning views of the Manhattan skyline, Statue of Liberty, and Ellis Island",
+            "Biking and walking paths that wind through lush greenery and along the riverfront",
+            "Picnic areas equipped with tables, grills, and breathtaking vistas for al fresco dining",
+            "Fishing and crabbing opportunities along the Hudson River waterfront",
+            "Playgrounds and recreational facilities for children and families to enjoy",
+            "Historic sites such as the Central Railroad of New Jersey Terminal and the Empty Sky Memorial",
+            "Educational experiences at the Liberty Science Center, where science and history come alive",
+            "Ferry service to the Statue of Liberty and Ellis Island, providing a unique perspective on American history"
         ]
     };
+    
 
     const parkMapUrl = "https://example.com/park-map.jpg"; // Replace with actual URL for the park map
 
@@ -45,8 +57,10 @@ function Place1() {
                         <div className="overview-section">
                             <h1>{placeDetails.name}</h1>
                             <p>{placeDetails.description}</p>
-                            <h2>About Liberty State Park</h2>
+                            &nbsp;
+                            <h2>About</h2>
                             <p>{placeDetails.about}</p>
+                            &nbsp;
                             <h2>Features</h2>
                             <ul>
                                 {placeDetails.features.map((feature, index) => (
@@ -66,7 +80,7 @@ function Place1() {
                                     <p>Address: {placeDetails.address}</p>
                                     <p>Phone: {placeDetails.phone}</p>
                                     <p>Hours: {placeDetails.hours}</p>
-                                    <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>
+                                    <p>Website: <a className="link" href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>
                                 </div>
                             </div>
                         </div>

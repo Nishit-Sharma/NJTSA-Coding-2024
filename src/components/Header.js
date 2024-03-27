@@ -16,7 +16,8 @@ function Header() {
           <ul>
             {/* // Adding links to the home and cart */}
             <li className="home">
-              <Link to="/">Home</Link>
+              {/* Add a class to the Link component for styling */}
+              <Link to="/" className="home-link">Home</Link>
             </li>
           </ul>
       </nav>

@@ -31,7 +31,7 @@ function Home() {
           <h1>Welcome to our travel website!</h1>
           <p>Choose from one of our 10 places to learn more:</p>
           <div className="places-container">
-            <Link key={1} to={`/place${1}`} className="place-link">
+            <Link key={1} to={`/place${1}`} className="place">
               <img src={Image1} alt={`Liberty State Park`} className="place-image" />
               <p>Liberty State Park</p>
             </Link>

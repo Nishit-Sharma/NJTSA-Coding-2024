@@ -12,9 +12,10 @@ a {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
 }
 
 /* Place Container Styles */
@@ -22,12 +23,9 @@ a {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Adjust as needed */
     gap: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.main-body {
-    padding: 20px; /* Add padding for space */
+    padding: 0;
+    width: 100%;
 }
 
 .place-container h1 {
@@ -123,12 +121,34 @@ p {
 }
 
 .overview-section {
-    flex: 2;
-    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%
 }
+
+.overview-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.overview-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.overview-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.overview-section ul li {
+    margin-bottom: 10px;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -168,12 +188,12 @@ nav ul li a:hover {
 }
 
 .sidebar {
-    width: 300px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    width: 100%;
 }
 
 .sidebar-content {
@@ -189,9 +209,58 @@ nav ul li a:hover {
 
 .general-info h2 {
     font-size: 20px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .general-info p {
     margin: 10px 0;
+}
+
+/* CSS for placeDetails */
+.place-details {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.place-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.place-details p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.place-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.place-details ul li {
+    margin-bottom: 10px;
+}
+
+/* CSS for Header component */
+.home-link {
+    text-decoration: none;
+    color: lightblue; /* Blue color for unvisited links */
+}
+
+.home-link:hover {
+    text-decoration: none; /* Underline effect on hover */
+    color: rgb(60, 175, 214);
+}
+
+.link {
+    color: #007bff;
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline effect on hover */
 }
