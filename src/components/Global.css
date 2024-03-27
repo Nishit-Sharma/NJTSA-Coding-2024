@@ -205,6 +205,14 @@ nav ul li a:hover {
     word-wrap: break-word;  /* Break words to prevent overflow */
 }
 
+.park-map {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc; /* Add border around the map */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    overflow: hidden; /* Optional: Hide any overflowing content */
+}
+
 .park-map img {
     width: 100%;
     height: auto;

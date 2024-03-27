@@ -1,60 +1,89 @@
+// Place6.js
+
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import '../../Global.css';
+import Image6 from '../../static/image6.jpg'; // Assuming this is the image for Liberty Science Center
 
 function Place6() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    delay: 100,
-  });
+    const props = useSpring({
+        to: { opacity: 1 },
+        from: { opacity: 0 },
+        delay: 100,
+    });
 
-const placeDetails = {
-    name: "Example Place",
-    description: "A beautiful destination in New Jersey with stunning views and rich history.",
-    address: "123 Main Street, New Jersey",
-    phone: "123-456-7890"
-};
+    const placeDetails = {
+        name: "Liberty Science Center",
+        description: "Ignite your curiosity and explore the wonders of science at Liberty Science Center, an interactive science museum and learning center.",
+        address: "222 Jersey City Blvd, Jersey City, NJ 07305",
+        phone: "(201) 200-1000",
+        hours: "Varies by season, check website for details",
+        website: "https://lsc.org/",
+        about: `
+            Liberty Science Center is a hub of discovery and innovation, offering hands-on exhibits, 
+            interactive demonstrations, and immersive experiences for visitors of all ages. 
+            Explore the mysteries of the universe in the Jennifer Chalsty Planetarium, 
+            the largest planetarium in the Western Hemisphere, or dive into the depths of the ocean 
+            in the interactive Our Hudson Home exhibition. 
+            Delve into the realms of technology, engineering, and robotics in the S.T.E.A.M. Works 
+            and MakerLab galleries, where creativity and experimentation know no bounds. 
+            With educational programs, live demonstrations, and special exhibitions 
+            throughout the year, Liberty Science Center inspires curiosity and sparks 
+            a passion for learning in visitors of all backgrounds and interests.
+        `,
+        features: [
+            "Hands-on exhibits and interactive demonstrations",
+            "The Jennifer Chalsty Planetarium, the largest planetarium in the Western Hemisphere",
+            "Our Hudson Home exhibition exploring the local ecosystem",
+            "S.T.E.A.M. Works and MakerLab galleries focusing on technology, engineering, and robotics",
+            "Live demonstrations and educational programs",
+            "Special exhibitions and events throughout the year",
+            "Dining options and gift shop onsite"
+        ]
+    };
 
-const activities = [
-    {
-        name: "Grounds For Sculpture",
-        description: "A sculpture park with a vast collection of contemporary sculptures.",
-        link: "https://www.groundsforsculpture.org/"
-    },
-    {
-        name: "Atlantic City Boardwalk",
-        description: "Iconic boardwalk known for its casinos, shops, and entertainment.",
-        link: "https://www.atlanticcitynj.com/"
-    },
-    {
-        name: "Ocean City Boardwalk",
-        description: "Family-friendly boardwalk offering shops, eateries, and amusements.",
-        link: "https://ocnj.us/"
-    }
-];
+    return (
+        <animated.div style={props}>
+            <Layout>
+                <div className="header" style={{ backgroundImage: `url(${Image6})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                    {/* You can add any overlay content here if needed */}
+                </div>
 
-return (
-    <animated.div style={props}>
-        <Layout>
-            <div className="place-container">
-                <h1>{placeDetails.name}</h1>
-                <p>{placeDetails.description}</p>
-                <p>Address: {placeDetails.address}</p>
-                <p>Phone: {placeDetails.phone}</p>
-                <h2>Activities in New Jersey</h2>
-                {activities.map((activity, index) => (
-                    <div key={index} className="activity">
-                        <h3>{activity.name}</h3>
-                        <p>{activity.description}</p>
-                        <a href={activity.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                <div className="container">
+                    <div className="place-container">
+                        {/* Overview Section */}
+                        <div className="overview-section">
+                            <h1>{placeDetails.name}</h1>
+                            <p>{placeDetails.description}</p>
+                            &nbsp;
+                            <h2>About</h2>
+                            <p>{placeDetails.about}</p>
+                            &nbsp;
+                            <h2>Features</h2>
+                            <ul>
+                                {placeDetails.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Sidebar with General Information */}
+                        <div className="sidebar">
+                            <div className="sidebar-content">
+                                <div className="general-info">
+                                    <h2>General Information</h2>
+                                    <p>Address: {placeDetails.address}</p>
+                                    <p>Phone: {placeDetails.phone}</p>
+                                    <p>Hours: {placeDetails.hours}</p>
+                                    <p>Website: <a className="link" href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                ))}
-            </div>
-        </Layout>
-    </animated.div>
-);
+                </div>
+            </Layout>
+        </animated.div>
+    );
 }
 
 export default Place6;

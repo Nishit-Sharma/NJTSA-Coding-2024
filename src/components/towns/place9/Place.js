@@ -1,60 +1,88 @@
+// Place9.js
+
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import '../../Global.css';
+import Image9 from '../../static/image9.jpg'; // Assuming this is the image for Delaware Water Gap National Recreation Area
 
 function Place9() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    delay: 100,
-  });
+    const props = useSpring({
+        to: { opacity: 1 },
+        from: { opacity: 0 },
+        delay: 100,
+    });
 
-const placeDetails = {
-    name: "Example Place",
-    description: "A beautiful destination in New Jersey with stunning views and rich history.",
-    address: "123 Main Street, New Jersey",
-    phone: "123-456-7890"
-};
+    const placeDetails = {
+        name: "Delaware Water Gap National Recreation Area",
+        description: "Immerse yourself in the beauty of nature and explore the wonders of the Delaware Water Gap National Recreation Area, a pristine wilderness sanctuary spanning the Delaware River in New Jersey and Pennsylvania.",
+        address: "1978 River Rd, Bushkill, PA 18324",
+        phone: "(570) 426-2452",
+        hours: "Open daily from sunrise to sunset",
+        website: "https://www.nps.gov/dewa/index.htm",
+        about: `
+            The Delaware Water Gap National Recreation Area offers a tranquil retreat from the hustle and bustle of everyday life, 
+            with lush forests, cascading waterfalls, and breathtaking vistas awaiting visitors at every turn. 
+            Explore over 70,000 acres of pristine wilderness, where outdoor enthusiasts can enjoy a variety of recreational activities, 
+            including hiking, biking, fishing, camping, and wildlife viewing. 
+            Discover the natural beauty of the Delaware River as it winds its way through towering cliffs and verdant valleys, 
+            or embark on a scenic drive along the historic Old Mine Road. 
+            With numerous trails, picnic areas, and scenic overlooks to explore, 
+            the Delaware Water Gap National Recreation Area offers endless opportunities for adventure and relaxation in the great outdoors.
+        `,
+        features: [
+            "Over 100 miles of hiking trails, ranging from easy strolls to challenging hikes",
+            "Scenic drives along the historic Old Mine Road and Delaware River Scenic Byway",
+            "Opportunities for camping, fishing, boating, and swimming",
+            "Spectacular waterfalls, including Dingmans Falls and Raymondskill Falls",
+            "Abundant wildlife, including white-tailed deer, black bears, and bald eagles",
+            "Visitor centers with exhibits, information, and ranger-led programs",
+            "Picnic areas, overlooks, and scenic vistas throughout the park",
+            "Accessibility features for visitors with disabilities"
+        ]
+    };
 
-const activities = [
-    {
-        name: "Grounds For Sculpture",
-        description: "A sculpture park with a vast collection of contemporary sculptures.",
-        link: "https://www.groundsforsculpture.org/"
-    },
-    {
-        name: "Atlantic City Boardwalk",
-        description: "Iconic boardwalk known for its casinos, shops, and entertainment.",
-        link: "https://www.atlanticcitynj.com/"
-    },
-    {
-        name: "Ocean City Boardwalk",
-        description: "Family-friendly boardwalk offering shops, eateries, and amusements.",
-        link: "https://ocnj.us/"
-    }
-];
+    return (
+        <animated.div style={props}>
+            <Layout>
+                <div className="header" style={{ backgroundImage: `url(${Image9})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                    {/* You can add any overlay content here if needed */}
+                </div>
 
-return (
-    <animated.div style={props}>
-        <Layout>
-            <div className="place-container">
-                <h1>{placeDetails.name}</h1>
-                <p>{placeDetails.description}</p>
-                <p>Address: {placeDetails.address}</p>
-                <p>Phone: {placeDetails.phone}</p>
-                <h2>Activities in New Jersey</h2>
-                {activities.map((activity, index) => (
-                    <div key={index} className="activity">
-                        <h3>{activity.name}</h3>
-                        <p>{activity.description}</p>
-                        <a href={activity.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                <div className="container">
+                    <div className="place-container">
+                        {/* Overview Section */}
+                        <div className="overview-section">
+                            <h1>{placeDetails.name}</h1>
+                            <p>{placeDetails.description}</p>
+                            &nbsp;
+                            <h2>About</h2>
+                            <p>{placeDetails.about}</p>
+                            &nbsp;
+                            <h2>Features</h2>
+                            <ul>
+                                {placeDetails.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Sidebar with General Information */}
+                        <div className="sidebar">
+                            <div className="sidebar-content">
+                                <div className="general-info">
+                                    <h2>General Information</h2>
+                                    <p>Address: {placeDetails.address}</p>
+                                    <p>Phone: {placeDetails.phone}</p>
+                                    <p>Hours: {placeDetails.hours}</p>
+                                    <p>Website: <a className="link" href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                ))}
-            </div>
-        </Layout>
-    </animated.div>
-);
+                </div>
+            </Layout>
+        </animated.div>
+    );
 }
 
 export default Place9;

@@ -1,60 +1,86 @@
+// Place10.js
+
 import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
-import '../../Global.css';
-
+import Image10 from '../../static/image10.jpg'; // Assuming this is the image for Atlantic City Boardwalk
 function Place10() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    delay: 100,
-  });
+    const props = useSpring({
+        to: { opacity: 1 },
+        from: { opacity: 0 },
+        delay: 100,
+    });
 
-const placeDetails = {
-    name: "Example Place",
-    description: "A beautiful destination in New Jersey with stunning views and rich history.",
-    address: "123 Main Street, New Jersey",
-    phone: "123-456-7890"
-};
-
-const activities = [
-    {
-        name: "Grounds For Sculpture",
-        description: "A sculpture park with a vast collection of contemporary sculptures.",
-        link: "https://www.groundsforsculpture.org/"
-    },
-    {
+    const placeDetails = {
         name: "Atlantic City Boardwalk",
-        description: "Iconic boardwalk known for its casinos, shops, and entertainment.",
-        link: "https://www.atlanticcitynj.com/"
-    },
-    {
-        name: "Ocean City Boardwalk",
-        description: "Family-friendly boardwalk offering shops, eateries, and amusements.",
-        link: "https://ocnj.us/"
-    }
-];
+        description: "Experience the vibrant energy and iconic landmarks of the Atlantic City Boardwalk, a historic promenade stretching along the scenic shores of the Atlantic Ocean.",
+        address: "Atlantic City, NJ 08401",
+        phone: "(609) 555-1234",
+        hours: "Open 24 hours",
+        website: "https://www.atlanticcitynj.com/",
+        about: `
+            The Atlantic City Boardwalk is a beloved seaside destination that captures the essence of fun, 
+            excitement, and nostalgia. Stretching for over four miles along the picturesque shores of the Atlantic Ocean, 
+            this historic promenade offers a myriad of attractions, entertainment options, and scenic views. 
+            Take a leisurely stroll along the wooden planks and soak up the sights and sounds of the bustling boardwalk, 
+            lined with shops, restaurants, and amusement arcades. 
+            Stop by iconic landmarks such as Steel Pier, known for its thrilling rides and carnival games, 
+            or catch a live performance at the legendary Boardwalk Hall. 
+            With sandy beaches, oceanfront resorts, and vibrant nightlife just steps away, 
+            the Atlantic City Boardwalk promises an unforgettable seaside experience for visitors of all ages.
+        `,
+        features: [
+            "Scenic wooden boardwalk stretching along the Atlantic Ocean",
+            "Shops, restaurants, and entertainment venues",
+            "Iconic landmarks such as Steel Pier and Boardwalk Hall",
+            "Amusement arcades and family-friendly attractions",
+            "Beautiful views of the ocean and coastline",
+            "Access to sandy beaches and oceanfront resorts",
+            "Vibrant nightlife and events throughout the year"
+        ]
+    };
 
-return (
-    <animated.div style={props}>
-        <Layout>
-            <div className="place-container">
-                <h1>{placeDetails.name}</h1>
-                <p>{placeDetails.description}</p>
-                <p>Address: {placeDetails.address}</p>
-                <p>Phone: {placeDetails.phone}</p>
-                <h2>Activities in New Jersey</h2>
-                {activities.map((activity, index) => (
-                    <div key={index} className="activity">
-                        <h3>{activity.name}</h3>
-                        <p>{activity.description}</p>
-                        <a href={activity.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
+    return (
+        <animated.div style={props}>
+            <Layout>
+                <div className="header" style={{ backgroundImage: `url(${Image10})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}>
+                    {/* You can add any overlay content here if needed */}
+                </div>
+                <div className="container">
+                    <div className="place-container">
+                        {/* Overview Section */}
+                        <div className="overview-section">
+                            <h1>{placeDetails.name}</h1>
+                            <p>{placeDetails.description}</p>
+                            &nbsp;
+                            <h2>About</h2>
+                            <p>{placeDetails.about}</p>
+                            &nbsp;
+                            <h2>Features</h2>
+                            <ul>
+                                {placeDetails.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Sidebar with General Information */}
+                        <div className="sidebar">
+                            <div className="sidebar-content">
+                                <div className="general-info">
+                                    <h2>General Information</h2>
+                                    <p>Address: {placeDetails.address}</p>
+                                    <p>Phone: {placeDetails.phone}</p>
+                                    <p>Hours: {placeDetails.hours}</p>
+                                    <p>Website: <a className="link" href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                ))}
-            </div>
-        </Layout>
-    </animated.div>
-);
+                </div>
+            </Layout>
+        </animated.div>
+    );
 }
 
 export default Place10;

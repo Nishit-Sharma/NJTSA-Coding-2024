@@ -42,8 +42,6 @@ function Place1() {
     };
     
 
-    const parkMapUrl = "https://example.com/park-map.jpg"; // Replace with actual URL for the park map
-
     return (
         <animated.div style={props}>
             <Layout>
@@ -73,7 +71,9 @@ function Place1() {
                         <div className="sidebar">
                             <div className="sidebar-content">
                                 <div className="park-map">
-                                    <img src={Image2} alt="Park Map" />
+                                <a href={Image2} target="_blank" rel="noopener noreferrer">
+                                        <img src={Image2} alt="Park Map" />
+                                    </a>
                                 </div>
                                 <div className="general-info">
                                     <h2>General Information</h2>
