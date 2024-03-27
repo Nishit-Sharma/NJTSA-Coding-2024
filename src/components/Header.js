@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Box } from "@chakra-ui/react";
 import './Global.css';
 
 function Header() {
   return (
-    <header className="header">
+    <Box className="header" borderBottomRadius="10px">
+    <header>
       <div className="logo header-logo header-logo-size">
         {/* Making the image link to something */}
         {/* <Link to="/">
@@ -12,14 +14,15 @@ function Header() {
         </Link> */}
       </div>
       <nav>
-        <ul>
-          {/* // Adding links to the home and cart */}
-          <li className="home">
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
+          <ul>
+            {/* // Adding links to the home and cart */}
+            <li className="home">
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
       </nav>
     </header>
+    </Box>
   );
 }
 
