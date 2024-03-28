@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Global.css';
+import logo from './static/logo.png';
 
 function Header() {
   return (
     <header className="header">
       <div className="logo header-logo header-logo-size">
         {/* Making the image link to something */}
-        {/* <Link to="/">
-          <img src={image} alt="BoboTique" />
-        </Link> */}
+        {<Link to="/">
+          <img src={logo} alt="NJ Getaway" />
+        </Link>}
       </div>
       <nav>
           <ul>
