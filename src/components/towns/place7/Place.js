@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import Image1 from '../../static/p7image1.avif'; // Assuming this is the image for Cape May County Park & Zoo
-import Image2 from '../../static/p1image2.png';
+import Image2 from '../../static/p7image2.jpg';
 
 function Place7() {
     const props = useSpring({

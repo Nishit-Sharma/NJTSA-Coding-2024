@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import Image1 from '../../static/p5image1.jpg'; // Assuming this is the image for Adventure Aquarium
-import Image2 from '../../static/p1image2.png';
+import Image2 from '../../static/p5image2.webp';
 
 function Place5() {
     const props = useSpring({
