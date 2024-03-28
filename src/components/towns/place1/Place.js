@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring';
 import '../../Global.css';
 import Image1 from '../../static/p1image1.jpg';
 import Image2 from '../../static/p1image2.png';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 function Place1() {
     const props = useSpring({
@@ -72,7 +74,7 @@ function Place1() {
                             <div className="sidebar-content">
                                 <div className="park-map">
                                 <a href={Image2} target="_blank" rel="noopener noreferrer">
-                                        <img src={Image2} alt="Park Map" />
+                                        <LazyLoadImage src={Image2} alt="Park Map" />
                                     </a>
                                 </div>
                                 <div className="general-info">
