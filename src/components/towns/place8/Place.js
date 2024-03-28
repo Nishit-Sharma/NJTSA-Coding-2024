@@ -4,6 +4,7 @@ import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import Image1 from '../../static/p8image1.webp'; // Assuming this is the image for Morey's Piers & Beachfront
+import Image2 from '../../static/p1image2.png';
 
 function Place8() {
     const props = useSpring({
@@ -69,6 +70,11 @@ function Place8() {
                         {/* Sidebar with General Information */}
                         <div className="sidebar">
                             <div className="sidebar-content">
+                                <div className="park-map">
+                                    <a href={Image2} target="_blank" rel="noopener noreferrer">
+                                        <img src={Image2} alt="Park Map" />
+                                    </a>
+                                </div>
                                 <div className="general-info">
                                     <h2>General Information</h2>
                                     <p>Address: {placeDetails.address}</p>
