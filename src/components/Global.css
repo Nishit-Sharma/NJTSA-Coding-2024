@@ -30,12 +30,12 @@ a {
 }
 
 .place-container h1 {
-    font-size: 2.5vw;           /* vw */
+    font-size: 2vw;           /* Decreased font size for heading */
     color: #333;
 }
 
 .place-container p {
-    font-size: 1.5vw;           /* vw */
+    font-size: 1.2vw;         /* Decreased font size for paragraph */
     color: #666;
 }
 
@@ -45,12 +45,12 @@ a {
 }
 
 .activity h3 {
-    font-size: 2vw;            /* vw */
+    font-size: 1.8vw;            /* Adjusted font size */
     color: #333;
 }
 
 .activity p {
-    font-size: 1.4vw;           /* vw */
+    font-size: 1.2vw;           /* Adjusted font size */
     color: #777;
 }
 
@@ -65,13 +65,23 @@ a {
     text-align: center;
 }
 
+.Home h1 {
+    font-size: 36px; /* Increased font size for heading */
+    color: #333;
+}
+
+.Home p {
+    font-size: 20px; /* Increased font size for paragraph */
+    color: #666;
+}
+
 h1 {
     font-size: 28px;
     color: #333;
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;            /* Adjusted font size */
     color: #666;
 }
 
@@ -122,7 +132,7 @@ p {
     font-size: 3vw;         /* vw */
 }
 
-.overview-section {
+-section {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -130,14 +140,15 @@ p {
     width: 100%
 }
 
+/* Overview Section */
 .overview-section h2 {
-    font-size: 2.0vw;            /* vw */
+    font-size: 1.6vw;         /* Decreased font size for heading */
     color: #333;
     margin-bottom: 10px;
 }
 
 .overview-section p {
-    font-size: 1.2vw;           /* vw */
+    font-size: 1vw;           /* Decreased font size for paragraph */
     color: #666;
     line-height: 1.5;
 }
@@ -145,7 +156,7 @@ p {
 .overview-section ul {
     list-style-type: disc;
     padding-left: 20px;
-    font-size: 1.2vw;           /* vw */
+    font-size: 1vw;           /* Decreased font size for list */
 }
 
 .overview-section ul li {
@@ -218,14 +229,15 @@ nav ul li a:hover {
     height: auto;
 }
 
+/* Sidebar with General Information */
 .general-info h2 {
-    font-size: 1.6vw;         /* vw */
+    font-size: 1.4vw;         /* Decreased font size for heading */
     margin-top: 20px;
 }
 
 .general-info p {
     margin: 1vw 0;   
-    font-size: 1.2vw;       /* vw */
+    font-size: 1vw;           /* Decreased font size for paragraph */
 }
 
 /* CSS for placeDetails */
@@ -238,20 +250,20 @@ nav ul li a:hover {
 }
 
 .place-details h2 {
-    font-size: 1.6vw;       /* vw */
+    font-size: 1.4vw;       /* Adjusted font size */
     color: #333;
     margin-bottom: 10px;
 }
 
 .place-details p {
-    font-size: 1.6vw;           /* vw */
+    font-size: 1.4vw;           /* Adjusted font size */
     color: #666;
     line-height: 1.5;
 }
 
 /* CSS for Header component */
 .home-link {
-    font-size: 1.8vw;           /* vw */
+    font-size: 1.5vw;           /* Adjusted font size */
     text-decoration: none;
     color: lightblue; /* Blue color for unvisited links */
 }
