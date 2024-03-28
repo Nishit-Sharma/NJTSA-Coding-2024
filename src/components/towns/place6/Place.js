@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../Layout.js';
 import { useSpring, animated } from 'react-spring';
 import Image1 from '../../static/p6image1.jpg'; // Assuming this is the image for Liberty Science Center
-import Image2 from '../../static/p1image2.png';
+import Image2 from '../../static/p6image2.jpg';
 
 function Place6() {
     const props = useSpring({
